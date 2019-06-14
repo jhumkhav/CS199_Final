@@ -6,7 +6,7 @@
 
 module load samtools
 
-samtools sort -@ 8 -o ERR188044_chrX.bam ERR188044_chrX.sam
+samtools sort -@ 8 -o C1_R1.bam ERR188044_chrX.sam
 samtools sort -@ 8 -o ERR188104_chrX.bam ERR188104_chrX.sam
 samtools sort -@ 8 -o ERR188234_chrX.bam ERR188234_chrX.sam
 samtools sort -@ 8 -o ERR188245_chrX.bam ERR188245_chrX.sam
