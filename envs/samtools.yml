@@ -1,0 +1,7 @@
+name: samtools
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+prefix: /data/users/jhumkhav/bin/miniconda3/envs/samtools
+
