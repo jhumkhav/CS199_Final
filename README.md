@@ -88,8 +88,440 @@ cuffdiff -o diff_out -b genome.fa -L C1,C2 -u merged_asm/merged.gtf GSM794485_C1
 ```
 
 **Directory Tree**
-Below is a tree of the directory for this protocol that contains all of the downloaded and created files.
 
+Below is a tree of the directory for this protocol that contains all of the downloaded and created files.
+```
+|-- assemblies.txt
+|-- C1_R1_clout
+|   |-- genes.fpkm_tracking
+|   |-- isoforms.fpkm_tracking
+|   |-- skipped.gtf
+|   `-- transcripts.gtf
+|-- C1_R1_thout
+|   |-- accepted_hits.bam
+|   |-- align_summary.txt
+|   |-- deletions.bed
+|   |-- insertions.bed
+|   |-- junctions.bed
+|   |-- logs
+|   |   |-- bowtie.left_kept_reads.log
+|   |   |-- bowtie.right_kept_reads.log
+|   |   |-- g2f.err
+|   |   |-- g2f.out
+|   |   |-- gtf_juncs.log
+|   |   |-- m2g_left_kept_reads.err
+|   |   |-- m2g_left_kept_reads.out
+|   |   |-- m2g_right_kept_reads.err
+|   |   |-- m2g_right_kept_reads.out
+|   |   |-- prep_reads.log
+|   |   |-- reports.log
+|   |   |-- reports.merge_bam.log
+|   |   |-- reports.samtools_sort.log0
+|   |   |-- reports.samtools_sort.log1
+|   |   |-- reports.samtools_sort.log2
+|   |   |-- reports.samtools_sort.log3
+|   |   |-- reports.samtools_sort.log4
+|   |   |-- reports.samtools_sort.log5
+|   |   |-- reports.samtools_sort.log6
+|   |   |-- reports.samtools_sort.log7
+|   |   |-- run.log
+|   |   `-- tophat.log
+|   |-- prep_reads.info
+|   `-- unmapped.bam
+|-- C1_R2_clout
+|   |-- genes.fpkm_tracking
+|   |-- isoforms.fpkm_tracking
+|   |-- skipped.gtf
+|   `-- transcripts.gtf
+|-- C1_R2_thout
+|   |-- accepted_hits.bam
+|   |-- align_summary.txt
+|   |-- deletions.bed
+|   |-- insertions.bed
+|   |-- junctions.bed
+|   |-- logs
+|   |   |-- bowtie.left_kept_reads.log
+|   |   |-- bowtie.right_kept_reads.log
+|   |   |-- g2f.err
+|   |   |-- g2f.out
+|   |   |-- gtf_juncs.log
+|   |   |-- m2g_left_kept_reads.err
+|   |   |-- m2g_left_kept_reads.out
+|   |   |-- m2g_right_kept_reads.err
+|   |   |-- m2g_right_kept_reads.out
+|   |   |-- prep_reads.log
+|   |   |-- reports.log
+|   |   |-- reports.merge_bam.log
+|   |   |-- reports.samtools_sort.log0
+|   |   |-- reports.samtools_sort.log1
+|   |   |-- reports.samtools_sort.log2
+|   |   |-- reports.samtools_sort.log3
+|   |   |-- reports.samtools_sort.log4
+|   |   |-- reports.samtools_sort.log5
+|   |   |-- reports.samtools_sort.log6
+|   |   |-- reports.samtools_sort.log7
+|   |   |-- run.log
+|   |   `-- tophat.log
+|   |-- prep_reads.info
+|   `-- unmapped.bam
+|-- C1_R3_clout
+|   |-- genes.fpkm_tracking
+|   |-- isoforms.fpkm_tracking
+|   |-- skipped.gtf
+|   `-- transcripts.gtf
+|-- C1_R3_thout
+|   |-- accepted_hits.bam
+|   |-- align_summary.txt
+|   |-- deletions.bed
+|   |-- insertions.bed
+|   |-- junctions.bed
+|   |-- logs
+|   |   |-- bowtie_build.log
+|   |   |-- bowtie.left_kept_reads.log
+|   |   |-- bowtie.right_kept_reads.log
+|   |   |-- bowtie.right_kept_reads.m2g_um.log
+|   |   |-- bowtie.right_kept_reads.m2g_um_unmapped.log
+|   |   |-- g2f.err
+|   |   |-- g2f.out
+|   |   |-- gtf_juncs.log
+|   |   |-- juncs_db.log
+|   |   |-- long_spanning_reads.segs.log
+|   |   |-- m2g_left_kept_reads.err
+|   |   |-- m2g_left_kept_reads.out
+|   |   |-- m2g_right_kept_reads.err
+|   |   |-- m2g_right_kept_reads.out
+|   |   |-- prep_reads.log
+|   |   |-- reports.log
+|   |   |-- reports.samtools_sort.log0
+|   |   |-- run.log
+|   |   `-- tophat.log
+|   `-- prep_reads.info
+|-- C2_R1_clout
+|   |-- genes.fpkm_tracking
+|   |-- isoforms.fpkm_tracking
+|   |-- skipped.gtf
+|   `-- transcripts.gtf
+|-- C2_R1_thout
+|   |-- accepted_hits.bam
+|   |-- align_summary.txt
+|   |-- deletions.bed
+|   |-- insertions.bed
+|   |-- junctions.bed
+|   |-- logs
+|   |   |-- bam_merge_um.log
+|   |   |-- bowtie.left_kept_reads.log
+|   |   |-- bowtie.right_kept_reads.log
+|   |   |-- g2f.err
+|   |   |-- g2f.out
+|   |   |-- gtf_juncs.log
+|   |   |-- m2g_left_kept_reads.err
+|   |   |-- m2g_left_kept_reads.out
+|   |   |-- m2g_right_kept_reads.err
+|   |   |-- m2g_right_kept_reads.out
+|   |   |-- prep_reads.log
+|   |   |-- reports.log
+|   |   |-- reports.merge_bam.log
+|   |   |-- reports.samtools_sort.log0
+|   |   |-- reports.samtools_sort.log1
+|   |   |-- reports.samtools_sort.log2
+|   |   |-- reports.samtools_sort.log3
+|   |   |-- reports.samtools_sort.log4
+|   |   |-- reports.samtools_sort.log5
+|   |   |-- reports.samtools_sort.log6
+|   |   |-- reports.samtools_sort.log7
+|   |   |-- run.log
+|   |   `-- tophat.log
+|   |-- prep_reads.info
+|   `-- unmapped.bam
+|-- C2_R2_clout
+|   |-- genes.fpkm_tracking
+|   |-- isoforms.fpkm_tracking
+|   |-- skipped.gtf
+|   `-- transcripts.gtf
+|-- C2_R2_thout
+|   |-- accepted_hits.bam
+|   |-- align_summary.txt
+|   |-- deletions.bed
+|   |-- insertions.bed
+|   |-- junctions.bed
+|   |-- logs
+|   |   |-- bowtie.left_kept_reads.log
+|   |   |-- bowtie.right_kept_reads.log
+|   |   |-- g2f.err
+|   |   |-- g2f.out
+|   |   |-- gtf_juncs.log
+|   |   |-- m2g_left_kept_reads.err
+|   |   |-- m2g_left_kept_reads.out
+|   |   |-- m2g_right_kept_reads.err
+|   |   |-- m2g_right_kept_reads.out
+|   |   |-- prep_reads.log
+|   |   |-- reports.log
+|   |   |-- reports.merge_bam.log
+|   |   |-- reports.samtools_sort.log0
+|   |   |-- reports.samtools_sort.log1
+|   |   |-- reports.samtools_sort.log2
+|   |   |-- reports.samtools_sort.log3
+|   |   |-- reports.samtools_sort.log4
+|   |   |-- reports.samtools_sort.log5
+|   |   |-- reports.samtools_sort.log6
+|   |   |-- reports.samtools_sort.log7
+|   |   |-- run.log
+|   |   `-- tophat.log
+|   |-- prep_reads.info
+|   `-- unmapped.bam
+|-- C2_R3_clout
+|   |-- genes.fpkm_tracking
+|   |-- isoforms.fpkm_tracking
+|   |-- skipped.gtf
+|   `-- transcripts.gtf
+|-- C2_R3_thout
+|   |-- accepted_hits.bam
+|   |-- align_summary.txt
+|   |-- deletions.bed
+|   |-- insertions.bed
+|   |-- junctions.bed
+|   |-- logs
+|   |   |-- bowtie.left_kept_reads.log
+|   |   |-- bowtie.right_kept_reads.log
+|   |   |-- g2f.err
+|   |   |-- g2f.out
+|   |   |-- gtf_juncs.log
+|   |   |-- m2g_left_kept_reads.err
+|   |   |-- m2g_left_kept_reads.out
+|   |   |-- m2g_right_kept_reads.err
+|   |   |-- m2g_right_kept_reads.out
+|   |   |-- prep_reads.log
+|   |   |-- reports.log
+|   |   |-- reports.merge_bam.log
+|   |   |-- reports.samtools_sort.log0
+|   |   |-- reports.samtools_sort.log1
+|   |   |-- reports.samtools_sort.log2
+|   |   |-- reports.samtools_sort.log3
+|   |   |-- reports.samtools_sort.log4
+|   |   |-- reports.samtools_sort.log5
+|   |   |-- reports.samtools_sort.log6
+|   |   |-- reports.samtools_sort.log7
+|   |   |-- run.log
+|   |   `-- tophat.log
+|   `-- prep_reads.info
+|-- cuffdiff.e7128987
+|-- cuffdiff.o7128987
+|-- cuffdiff.sh
+|-- cufflinks2.sh
+|-- cufflinks.sh
+|-- cuffmerge.sh
+|-- diff_out
+|   |-- bias_params.info
+|   |-- cds.count_tracking
+|   |-- cds.diff
+|   |-- cds_exp.diff
+|   |-- cds.fpkm_tracking
+|   |-- cds.read_group_tracking
+|   |-- gene_exp.diff
+|   |-- genes.count_tracking
+|   |-- genes.fpkm_tracking
+|   |-- genes.read_group_tracking
+|   |-- isoform_exp.diff
+|   |-- isoforms.count_tracking
+|   |-- isoforms.fpkm_tracking
+|   |-- isoforms.read_group_tracking
+|   |-- promoters.diff
+|   |-- read_groups.info
+|   |-- run.info
+|   |-- splicing.diff
+|   |-- tss_group_exp.diff
+|   |-- tss_groups.count_tracking
+|   |-- tss_groups.fpkm_tracking
+|   |-- tss_groups.read_group_tracking
+|   `-- var_model.info
+|-- Drosophila_melanogaster
+|   `-- Ensembl
+|       `-- BDGP5.25
+|           |-- Annotation
+|           |   |-- Archives
+|           |   |   |-- archive-2010-09-27-21-29-49
+|           |   |   |   |-- ChromInfo.txt
+|           |   |   |   |-- DATE.txt
+|           |   |   |   |-- Drosophila_melanogaster.BDGP5.25.59.gtf
+|           |   |   |   |-- README.txt
+|           |   |   |   |-- refFlat.txt
+|           |   |   |   |-- refFlat.txt.gz
+|           |   |   |   |-- refGene.txt
+|           |   |   |   |-- splice_sites_34
+|           |   |   |   |   |-- exon_coords.txt
+|           |   |   |   |   |-- splice_sites-34.fa
+|           |   |   |   |   |-- splice_sites-34.fa.2bpb
+|           |   |   |   |   |-- splice_sites-34.fa.idx
+|           |   |   |   |   `-- splice_sites-34.fa.vld
+|           |   |   |   `-- splice_sites_49
+|           |   |   |       |-- exon_coords.txt
+|           |   |   |       |-- splice_sites-49.fa
+|           |   |   |       |-- splice_sites-49.fa.2bpb
+|           |   |   |       |-- splice_sites-49.fa.idx
+|           |   |   |       `-- splice_sites-49.fa.vld
+|           |   |   |-- archive-2011-01-27-18-19-23
+|           |   |   |   |-- Genes
+|           |   |   |   |   |-- ChromInfo.txt
+|           |   |   |   |   |-- genes.gtf
+|           |   |   |   |   |-- genes.gtf.bak
+|           |   |   |   |   |-- refFlat.txt.gz
+|           |   |   |   |   |-- refFlat.txt.gz.bak
+|           |   |   |   |   `-- refGene.txt
+|           |   |   |   |-- README.txt
+|           |   |   |   |-- SmallRNA
+|           |   |   |   |   |-- hairpin.fa
+|           |   |   |   |   `-- mature.fa
+|           |   |   |   `-- Variation
+|           |   |   |-- archive-2011-08-30-21-38-10
+|           |   |   |   |-- Genes
+|           |   |   |   |   |-- ChromInfo.txt
+|           |   |   |   |   |-- genes.gtf
+|           |   |   |   |   |-- genes.gtf.bak
+|           |   |   |   |   |-- refFlat.txt.gz
+|           |   |   |   |   |-- refFlat.txt.gz.bak
+|           |   |   |   |   `-- refGene.txt
+|           |   |   |   |-- README.txt
+|           |   |   |   |-- SmallRNA
+|           |   |   |   |   |-- mature.fa
+|           |   |   |   |   `-- precursor.fa
+|           |   |   |   `-- Variation
+|           |   |   |-- archive-2012-03-09-03-11-08
+|           |   |   |   |-- Genes
+|           |   |   |   |   |-- ChromInfo.txt
+|           |   |   |   |   |-- genes.gtf
+|           |   |   |   |   |-- genes.gtf.bak
+|           |   |   |   |   |-- refFlat.txt.gz
+|           |   |   |   |   |-- refFlat.txt.gz.bak
+|           |   |   |   |   `-- refGene.txt
+|           |   |   |   |-- README.txt
+|           |   |   |   |-- SmallRNA
+|           |   |   |   |   |-- mature.fa
+|           |   |   |   |   `-- precursor.fa
+|           |   |   |   `-- Variation
+|           |   |   |-- archive-2013-03-06-11-13-59
+|           |   |   |   |-- Genes
+|           |   |   |   |   |-- ChromInfo.txt
+|           |   |   |   |   |-- genes.gtf
+|           |   |   |   |   |-- genes.gtf.bak
+|           |   |   |   |   |-- refFlat.txt.gz
+|           |   |   |   |   |-- refFlat.txt.gz.bak
+|           |   |   |   |   `-- refGene.txt
+|           |   |   |   |-- README.txt
+|           |   |   |   |-- SmallRNA
+|           |   |   |   |   |-- mature.fa
+|           |   |   |   |   `-- precursor.fa
+|           |   |   |   `-- Variation
+|           |   |   |-- archive-2014-05-23-16-02-55
+|           |   |   |   |-- Genes
+|           |   |   |   |   |-- genes.gtf
+|           |   |   |   |   |-- genes.gtf.bak
+|           |   |   |   |   |-- refFlat.txt.gz
+|           |   |   |   |   `-- refFlat.txt.gz.bak
+|           |   |   |   |-- README.txt
+|           |   |   |   `-- SmallRNA
+|           |   |   |       |-- hairpin.fa
+|           |   |   |       `-- mature.fa
+|           |   |   |-- archive-2015-07-17-14-30-26
+|           |   |   |   |-- Genes
+|           |   |   |   |   |-- genes.gtf
+|           |   |   |   |   |-- genes.gtf.bak
+|           |   |   |   |   |-- refFlat.txt.gz
+|           |   |   |   |   `-- refFlat.txt.gz.bak
+|           |   |   |   |-- README.txt
+|           |   |   |   `-- SmallRNA
+|           |   |   |       |-- hairpin.fa
+|           |   |   |       `-- mature.fa
+|           |   |   `-- archive-current -> archive-2015-07-17-14-30-26
+|           |   |-- Genes -> Archives/archive-current/Genes
+|           |   |-- README.txt -> Archives/archive-current/README.txt
+|           |   `-- SmallRNA -> Archives/archive-current/SmallRNA
+|           `-- Sequence
+|               |-- AbundantSequences
+|               |   |-- adapter_contam1.fa
+|               |   |-- M.fa -> ../Chromosomes/M.fa
+|               |   |-- phix.fa
+|               |   |-- polyA.fa
+|               |   |-- polyC.fa
+|               |   `-- ribosomal.fa
+|               |-- Bowtie2Index
+|               |   |-- genome.1.bt2
+|               |   |-- genome.2.bt2
+|               |   |-- genome.3.bt2
+|               |   |-- genome.4.bt2
+|               |   |-- genome.fa -> ../WholeGenomeFasta/genome.fa
+|               |   |-- genome.rev.1.bt2
+|               |   `-- genome.rev.2.bt2
+|               |-- BowtieIndex
+|               |   |-- genome.1.ebwt
+|               |   |-- genome.2.ebwt
+|               |   |-- genome.3.ebwt
+|               |   |-- genome.4.ebwt
+|               |   |-- genome.fa -> ../WholeGenomeFasta/genome.fa
+|               |   |-- genome.rev.1.ebwt
+|               |   `-- genome.rev.2.ebwt
+|               |-- BWAIndex
+|               |   |-- genome.fa -> version0.6.0/genome.fa
+|               |   |-- genome.fa.amb -> version0.6.0/genome.fa.amb
+|               |   |-- genome.fa.ann -> version0.6.0/genome.fa.ann
+|               |   |-- genome.fa.bwt -> version0.6.0/genome.fa.bwt
+|               |   |-- genome.fa.pac -> version0.6.0/genome.fa.pac
+|               |   |-- genome.fa.sa -> version0.6.0/genome.fa.sa
+|               |   |-- version0.5.x
+|               |   |   |-- genome.fa -> ../../WholeGenomeFasta/genome.fa
+|               |   |   |-- genome.fa.amb
+|               |   |   |-- genome.fa.ann
+|               |   |   |-- genome.fa.bwt
+|               |   |   |-- genome.fa.pac
+|               |   |   |-- genome.fa.rbwt
+|               |   |   |-- genome.fa.rpac
+|               |   |   |-- genome.fa.rsa
+|               |   |   `-- genome.fa.sa
+|               |   `-- version0.6.0
+|               |       |-- genome.fa -> ../../WholeGenomeFasta/genome.fa
+|               |       |-- genome.fa.amb
+|               |       |-- genome.fa.ann
+|               |       |-- genome.fa.bwt
+|               |       |-- genome.fa.pac
+|               |       `-- genome.fa.sa
+|               |-- Chromosomes
+|               |   |-- 2L.fa
+|               |   |-- 2R.fa
+|               |   |-- 3L.fa
+|               |   |-- 3R.fa
+|               |   |-- 4.fa
+|               |   |-- M.fa
+|               |   `-- X.fa
+|               `-- WholeGenomeFasta
+|                   |-- genome.dict
+|                   |-- genome.fa
+|                   |-- genome.fa.fai
+|                   `-- GenomeSize.xml
+|-- genes.gtf -> ./Drosophila_melanogaster/Ensembl/BDGP5.25/Annotation/Genes/genes.gtf
+|-- genome.1.bt2 -> ./Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/Bowtie2Index/genome.1.bt2
+|-- genome.2.bt2 -> ./Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/Bowtie2Index/genome.2.bt2
+|-- genome.3.bt2 -> ./Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/Bowtie2Index/genome.3.bt2
+|-- genome.4.bt2 -> ./Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/Bowtie2Index/genome.4.bt2
+|-- genome.fa -> ./Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/WholeGenomeFasta/genome.fa
+|-- genome.rev.1.bt2 -> ./Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/Bowtie2Index/genome.rev.1.bt2
+|-- genome.rev.2.bt2 -> ./Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/Bowtie2Index/genome.rev.2.bt2
+|-- GSM794483_C1_R1_1.fq
+|-- GSM794483_C1_R1_2.fq
+|-- GSM794484_C1_R2_1.fq
+|-- GSM794484_C1_R2_2.fq
+|-- GSM794485_C1_R3_1.fq
+|-- GSM794485_C1_R3_2.fq
+|-- GSM794486_C2_R1_1.fq
+|-- GSM794486_C2_R1_2.fq
+|-- GSM794487_C2_R2_1.fq
+|-- GSM794487_C2_R2_2.fq
+|-- GSM794488_C2_R3_1.fq
+|-- GSM794488_C2_R3_2.fq
+|-- merged_asm
+|   |-- logs
+|   |   `-- run.log
+|   `-- merged.gtf
+`-- tophat.sh
+```
 
 ### HISAT, StringTie, and Ballgown
 **Downloading Data**
