@@ -6,6 +6,7 @@ RNA-seq is used in order to measure and compare gene expression across different
 ## Experimental Design
 ### Downloading Data
 **TopHat and Cufflinks**
+
 Download and unpack the Fruit Fly iGenome data.
 ```
 wget ftp://igenome:G3nom3s4u@ussdftp.illumina.com/Drosophila_melanogaster/Ensembl/BDGP5.25/Drosophila_melanogaster_Ensembl_BDGP5.25.tar.gz
@@ -33,6 +34,7 @@ tar -zxvf GSE32038_simulated_fastq_files.tar.gz
 ```
 
 **HISAT, StringTie, and Ballgown**
+
 Unpack the data available through the following link:
 ftp://ftp.ccb.jhu.edu/pub/RNAseq_protocol/chrX_data.tar.gz
 ```
@@ -41,6 +43,7 @@ tar xvzf chrX_data.tar.gz
 
 ### Running the Analysis
 **TopHat and Cufflinks**
+
 Load the TopHat module and map the reads for each of the samples to the reference genome.
 ```
 module load tophat
