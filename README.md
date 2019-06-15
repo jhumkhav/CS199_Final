@@ -111,11 +111,6 @@ Create a scatter plot that compares the expression of the genes in the different
 > csScatter(genes(cuff_data), 'C1', 'C2')
 ```
 
-Create a volcano plot that can display the differentially expressed genes.
-```
-> csVolcano(genes(cuff_data), 'C1', 'C2')
-```
-
 **Directory Tree**
 
 Below is a tree of the directory for this protocol that contains all of the downloaded and created files.
