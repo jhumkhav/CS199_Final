@@ -613,93 +613,51 @@ stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C2_R3/C2_R3.gtf C2_R3.b
 
 **Directory Tree**
 Below is a tree of the directory for this protocol that contains all of the downloaded and created files.
+
 ```
 |-- ballgown
-|   |-- ERR188044
+|   |-- C1_R1
 |   |   |-- e2t.ctab
 |   |   |-- e_data.ctab
-|   |   |-- ERR188044_chrX.gtf
+|   |   |-- C1_R1.gtf
 |   |   |-- i2t.ctab
 |   |   |-- i_data.ctab
 |   |   `-- t_data.ctab
-|   |-- ERR188104
+|   |-- C1_R2
 |   |   |-- e2t.ctab
 |   |   |-- e_data.ctab
-|   |   |-- ERR188104_chrX.gtf
+|   |   |-- C1_R2.gtf
 |   |   |-- i2t.ctab
 |   |   |-- i_data.ctab
 |   |   `-- t_data.ctab
-|   |-- ERR188234
+|   |-- C1_R3
 |   |   |-- e2t.ctab
 |   |   |-- e_data.ctab
-|   |   |-- ERR188234_chrX.gtf
+|   |   |-- C1_R3.gtf
 |   |   |-- i2t.ctab
 |   |   |-- i_data.ctab
 |   |   `-- t_data.ctab
-|   |-- ERR188245
+|   |-- C2_R1
 |   |   |-- e2t.ctab
 |   |   |-- e_data.ctab
-|   |   |-- ERR188245_chrX.gtf
+|   |   |-- C2_R1.gtf
 |   |   |-- i2t.ctab
 |   |   |-- i_data.ctab
 |   |   `-- t_data.ctab
-|   |-- ERR188257
+|   |-- C2_R2
 |   |   |-- e2t.ctab
 |   |   |-- e_data.ctab
-|   |   |-- ERR188257_chrX.gtf
+|   |   |-- C2_R2.gtf
 |   |   |-- i2t.ctab
 |   |   |-- i_data.ctab
 |   |   `-- t_data.ctab
-|   |-- ERR188273
+|   |-- C2_R3
 |   |   |-- e2t.ctab
 |   |   |-- e_data.ctab
-|   |   |-- ERR188273_chrX.gtf
+|   |   |-- C2_R3.gtf
 |   |   |-- i2t.ctab
 |   |   |-- i_data.ctab
 |   |   `-- t_data.ctab
-|   |-- ERR188337
-|   |   |-- e2t.ctab
-|   |   |-- e_data.ctab
-|   |   |-- ERR188337_chrX.gtf
-|   |   |-- i2t.ctab
-|   |   |-- i_data.ctab
-|   |   `-- t_data.ctab
-|   |-- ERR188383
-|   |   |-- e2t.ctab
-|   |   |-- e_data.ctab
-|   |   |-- ERR188383_chrX.gtf
-|   |   |-- i2t.ctab
-|   |   |-- i_data.ctab
-|   |   `-- t_data.ctab
-|   |-- ERR188401
-|   |   |-- e2t.ctab
-|   |   |-- e_data.ctab
-|   |   |-- ERR188401_chrX.gtf
-|   |   |-- i2t.ctab
-|   |   |-- i_data.ctab
-|   |   `-- t_data.ctab
-|   |-- ERR188428
-|   |   |-- e2t.ctab
-|   |   |-- e_data.ctab
-|   |   |-- ERR188428_chrX.gtf
-|   |   |-- i2t.ctab
-|   |   |-- i_data.ctab
-|   |   `-- t_data.ctab
-|   |-- ERR188454
-|   |   |-- e2t.ctab
-|   |   |-- e_data.ctab
-|   |   |-- ERR188454_chrX.gtf
-|   |   |-- i2t.ctab
-|   |   |-- i_data.ctab
-|   |   `-- t_data.ctab
-|   `-- ERR204916
-|       |-- e2t.ctab
-|       |-- e_data.ctab
-|       |-- ERR204916_chrX.gtf
-|       |-- i2t.ctab
-|       |-- i_data.ctab
-|       `-- t_data.ctab
-|-- ballgown.sh
 |-- bdgp6
 |   |-- genome.1.ht2
 |   |-- genome.2.ht2
@@ -710,87 +668,43 @@ Below is a tree of the directory for this protocol that contains all of the down
 |   |-- genome.7.ht2
 |   |-- genome.8.ht2
 |   `-- make_bdgp6.sh
-|-- bdgp6.tar.gz
-|-- chrX_data
-|   |-- genes
-|   |   `-- chrX.gtf
-|   |-- genome
-|   |   `-- chrX.fa
-|   |-- geuvadis_phenodata.csv
-|   |-- indexes
-|   |   |-- chrX_tran.1.ht2
-|   |   |-- chrX_tran.2.ht2
-|   |   |-- chrX_tran.3.ht2
-|   |   |-- chrX_tran.4.ht2
-|   |   |-- chrX_tran.5.ht2
-|   |   |-- chrX_tran.6.ht2
-|   |   |-- chrX_tran.7.ht2
-|   |   `-- chrX_tran.8.ht2
-|   |-- mergelist.txt
-|   `-- samples
-|       |-- ERR188044_chrX_1.fastq.gz
-|       |-- ERR188044_chrX_2.fastq.gz
-|       |-- ERR188104_chrX_1.fastq.gz
-|       |-- ERR188104_chrX_2.fastq.gz
-|       |-- ERR188234_chrX_1.fastq.gz
-|       |-- ERR188234_chrX_2.fastq.gz
-|       |-- ERR188245_chrX_1.fastq.gz
-|       |-- ERR188245_chrX_2.fastq.gz
-|       |-- ERR188257_chrX_1.fastq.gz
-|       |-- ERR188257_chrX_2.fastq.gz
-|       |-- ERR188273_chrX_1.fastq.gz
-|       |-- ERR188273_chrX_2.fastq.gz
-|       |-- ERR188337_chrX_1.fastq.gz
-|       |-- ERR188337_chrX_2.fastq.gz
-|       |-- ERR188383_chrX_1.fastq.gz
-|       |-- ERR188383_chrX_2.fastq.gz
-|       |-- ERR188401_chrX_1.fastq.gz
-|       |-- ERR188401_chrX_2.fastq.gz
-|       |-- ERR188428_chrX_1.fastq.gz
-|       |-- ERR188428_chrX_2.fastq.gz
-|       |-- ERR188454_chrX_1.fastq.gz
-|       |-- ERR188454_chrX_2.fastq.gz
-|       |-- ERR204916_chrX_1.fastq.gz
-|       `-- ERR204916_chrX_2.fastq.gz
-|-- ERR188044_chrX.bam
-|-- ERR188044_chrX.gtf
-|-- ERR188044_chrX.sam
-|-- ERR188104_chrX.bam
-|-- ERR188104_chrX.gtf
-|-- ERR188104_chrX.sam
-|-- ERR188234_chrX.bam
-|-- ERR188234_chrX.gtf
-|-- ERR188234_chrX.sam
-|-- ERR188245_chrX.bam
-|-- ERR188245_chrX.gtf
-|-- ERR188245_chrX.sam
-|-- ERR188257_chrX.bam
-|-- ERR188257_chrX.gtf
-|-- ERR188257_chrX.sam
-|-- ERR188273_chrX.bam
-|-- ERR188273_chrX.gtf
-|-- ERR188273_chrX.sam
-|-- ERR188337_chrX.bam
-|-- ERR188337_chrX.gtf
-|-- ERR188337_chrX.sam
-|-- ERR188383_chrX.bam
-|-- ERR188383_chrX.gtf
-|-- ERR188383_chrX.sam
-|-- ERR188401_chrX.bam
-|-- ERR188401_chrX.gtf
-|-- ERR188401_chrX.sam
-|-- ERR188428_chrX.bam
-|-- ERR188428_chrX.gtf
-|-- ERR188428_chrX.sam
-|-- ERR188454_chrX.bam
-|-- ERR188454_chrX.gtf
-|-- ERR188454_chrX.sam
-|-- ERR204916_chrX.bam
-|-- ERR204916_chrX.gtf
-|-- ERR204916_chrX.sam
-|-- hisat.sh
+|-- C1_R1.bam
+|-- C1_R1.gtf
+|-- C1_R1.sam
+|-- C1_R2.bam
+|-- C1_R2.gtf
+|-- C1_R2.sam
+|-- C1_R3.bam
+|-- C1_R3.gtf
+|-- C1_R3.sam
+|-- C2_R1.bam
+|-- C2_R1.gtf
+|-- C2_R1.sam
+|-- C2_R2.bam
+|-- C2_R2.gtf
+|-- C2_R2.sam
+|-- C2_R3.bam
+|-- C2_R3.gtf
+|-- C2_R3.sam
+|-- genes.gtf -> /data/users/jhumkhav/rnaseq/Drosophila_melanogaster/Ensembl/BDGP5.25/Annotation/Genes/genes.gtf
+|-- GSE32038_simulated_fastq_files.tar.gz
+|-- GSM794483_C1_R1_1.fq.gz
+|-- GSM794483_C1_R1_2.fq.gz
+|-- GSM794484_C1_R2_1.fq.gz
+|-- GSM794484_C1_R2_2.fq.gz
+|-- GSM794485_C1_R3_1.fq.gz
+|-- GSM794485_C1_R3_2.fq.gz
+|-- GSM794486_C2_R1_1.fq.gz
+|-- GSM794486_C2_R1_2.fq.gz
+|-- GSM794487_C2_R2_1.fq.gz
+|-- GSM794487_C2_R2_2.fq.gz
+|-- GSM794488_C2_R3_1.fq.gz
+|-- GSM794488_C2_R3_2.fq.gz
 |-- merge.sh
-|-- my_hisat.sh
+|-- mergelist.txt
+|-- myhisat.sh
 |-- samtools.sh
 |-- stringtie_merged.gtf
 `-- stringtie.sh
+
+
