@@ -611,8 +611,20 @@ stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C2_R1/C2_R1.gtf C2_R1.b
 stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C2_R2/C2_R2.gtf C2_R2.bam
 stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C2_R3/C2_R3.gtf C2_R3.bam
 ```
+**C. Data Visualization**
 
-**C. Directory Tree**
+Load R and the relevant packages.
+```
+>library(ballgown)
+>library(RSkittleBrewer)
+>library(genefilter)
+>library(dplyr)
+>library(devtools)
+```
+
+Run the proper functions to create the necessary plots for analysis. 
+
+**D. Directory Tree**
 
 Below is a tree of the directory for this protocol that contains all of the downloaded and created files.
 
