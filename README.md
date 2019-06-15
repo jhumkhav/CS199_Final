@@ -708,5 +708,5 @@ Below is a tree of the directory for this protocol that contains all of the down
 |-- samtools.sh
 |-- stringtie_merged.gtf
 `-- stringtie.sh
-
+```
 
