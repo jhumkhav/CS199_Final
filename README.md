@@ -87,6 +87,29 @@ cuffdiff -o diff_out -b genome.fa -L C1,C2 -u merged_asm/merged.gtf GSM794484_C1
 cuffdiff -o diff_out -b genome.fa -L C1,C2 -u merged_asm/merged.gtf GSM794485_C1_R3_thout/accepted_hits.bam, GSM794488_C2_R3_thout/accepted_hits.bam
 ```
 
+**Data Visualization**
+
+Loading R and the CummerBund package, create a database from the data in the Cuffdiff output.
+```
+> library(cummeRbund)
+> cuff_data <- readCufflinks('diff_out')
+```
+
+Create a plot of the distribution of the expression levels for the samples.
+```
+> csDensity(genes(cuff_data))
+```
+
+Create a scatter plot that compares the expression of the genes in the different conditions.
+```
+> csScatter(genes(cuff_data), 'C1', 'C2')
+```
+
+Create a volcano plot that can display the differentially expressed genes.
+```
+> csVolcano(genes(cuff_data), 'C1', 'C2')
+```
+
 **Directory Tree**
 
 Below is a tree of the directory for this protocol that contains all of the downloaded and created files.
