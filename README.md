@@ -4,6 +4,9 @@
 RNA-seq is used in order to measure and compare gene expression across different situations or conditions. This project aims to compare two different protocols that have been used to study differential gene expression. The first protocol uses TopHat and Cufflinks, while the second uses HISAT, StringTie, and Ballgown.
 
 ## Experimental Design
+**Create the Environments**
+
+The necessary environments for this project are [TopHat](envs/tophat.yml), [Cufflinks](envs/cufflinks.yml), [HISAT](envs/hisat.yml), [StringTie](envs/stringtie.yml), and
 ### TopHat and Cufflinks Protocol
 **Download Data**
 
@@ -612,6 +615,7 @@ stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C2_R3/C2_R3.gtf C2_R3.b
 ```
 
 **Directory Tree**
+
 Below is a tree of the directory for this protocol that contains all of the downloaded and created files.
 
 ```
