@@ -526,10 +526,10 @@ Below is a tree of the directory for this protocol that contains all of the down
 ### HISAT, StringTie, and Ballgown
 **Downloading Data**
 
-Unpack the data available through the following link:
-ftp://ftp.ccb.jhu.edu/pub/RNAseq_protocol/chrX_data.tar.gz
+Unpack the same data that was obtained in the previous protocol.
 ```
-tar xvzf chrX_data.tar.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE32nnn/GSE32038/suppl/GSE32038%5Fsimulated%5Ffastq%5Ffiles%2Etar%2Egz
+tar -zxvf GSE32038_simulated_fastq_files.tar.gz
 ```
 **Analysis**
 
@@ -561,43 +561,31 @@ Load StringTie and assemble the transcripts for each file.
 ```
 module load stringtie
 
-stringtie -p 8 -G chrX_data/genes/chrX.gtf -o ERR188044_chrX.gtf -l ERR188044 ERR188044_chrX.bam
-stringtie -p 8 -G chrX_data/genes/chrX.gtf -o ERR188104_chrX.gtf -l ERR188104 ERR188104_chrX.bam
-stringtie -p 8 -G chrX_data/genes/chrX.gtf -o ERR188234_chrX.gtf -l ERR188234 ERR188234_chrX.bam
-stringtie -p 8 -G chrX_data/genes/chrX.gtf -o ERR188245_chrX.gtf -l ERR188245 ERR188245_chrX.bam
-stringtie -p 8 -G chrX_data/genes/chrX.gtf -o ERR188257_chrX.gtf -l ERR188257 ERR188257_chrX.bam
-stringtie -p 8 -G chrX_data/genes/chrX.gtf -o ERR188273_chrX.gtf -l ERR188273 ERR188273_chrX.bam
-stringtie -p 8 -G chrX_data/genes/chrX.gtf -o ERR188337_chrX.gtf -l ERR188337 ERR188337_chrX.bam
-stringtie -p 8 -G chrX_data/genes/chrX.gtf -o ERR188383_chrX.gtf -l ERR188383 ERR188383_chrX.bam
-stringtie -p 8 -G chrX_data/genes/chrX.gtf -o ERR188401_chrX.gtf -l ERR188401 ERR188401_chrX.bam
-stringtie -p 8 -G chrX_data/genes/chrX.gtf -o ERR188428_chrX.gtf -l ERR188428 ERR188428_chrX.bam
-stringtie -p 8 -G chrX_data/genes/chrX.gtf -o ERR188454_chrX.gtf -l ERR188454 ERR188454_chrX.bam
-stringtie -p 8 -G chrX_data/genes/chrX.gtf -o ERR204916_chrX.gtf -l ERR204916 ERR204916_chrX.bam
+stringtie -p 8 -G genes.gtf -o C1_R1.gtf -l C1_R1 C1_R1.bam
+stringtie -p 8 -G genes.gtf -o C1_R2.gtf -l C1_R2 C1_R2.bam
+stringtie -p 8 -G genes.gtf -o C1_R3.gtf -l C1_R3 C1_R3.bam
+stringtie -p 8 -G genes.gtf -o C2_R1.gtf -l C2_R1 C2_R1.bam
+stringtie -p 8 -G genes.gtf -o C2_R2.gtf -l C2_R2 C2_R2.bam
+stringtie -p 8 -G genes.gtf -o C2_R3.gtf -l C2_R3 C2_R3.bam
 ```
 
 Merge all of the trancripts using StringTie module.
 ```
 module load stringtie
 
-stringtie --merge -p 8 -G chrX_data/genes/chrX.gtf -o stringtie_merged.gtf chrX_data/mergelist.txt
+stringtie --merge -p 8 -G genes.gtf -o stringtie_merged.gtf mergelist.txt
 ```
 
 Load StringeTie module and determine abundances of transcripts and prepare data for Ballgown.
 ```
 module load stringtie
 
-stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/ERR188044/ERR188044_chrX.gtf ERR188044_chrX.bam
-stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/ERR188104/ERR188104_chrX.gtf ERR188104_chrX.bam
-stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/ERR188234/ERR188234_chrX.gtf ERR188234_chrX.bam
-stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/ERR188245/ERR188245_chrX.gtf ERR188245_chrX.bam
-stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/ERR188257/ERR188257_chrX.gtf ERR188257_chrX.bam
-stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/ERR188273/ERR188273_chrX.gtf ERR188273_chrX.bam
-stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/ERR188337/ERR188337_chrX.gtf ERR188337_chrX.bam
-stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/ERR188383/ERR188383_chrX.gtf ERR188383_chrX.bam
-stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/ERR188401/ERR188401_chrX.gtf ERR188401_chrX.bam
-stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/ERR188428/ERR188428_chrX.gtf ERR188428_chrX.bam
-stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/ERR188454/ERR188454_chrX.gtf ERR188454_chrX.bam
-stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/ERR204916/ERR204916_chrX.gtf ERR204916_chrX.bam
+stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C1_R1/C1_R1.gtf C1_R1.bam
+stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C1_R2/C1_R2.gtf C1_R2.bam
+stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C1_R3/C1_R3.gtf C1_R3.bam
+stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C2_R1/C2_R1.gtf C2_R1.bam
+stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C2_R2/C2_R2.gtf C2_R2.bam
+stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C2_R3/C2_R3.gtf C2_R3.bam
 ```
 
 **Directory Tree**
