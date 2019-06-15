@@ -6,7 +6,10 @@ RNA-seq is used in order to measure and compare gene expression across different
 ## Experimental Design
 **Create the Environments**
 
-The necessary environments for this project are [TopHat](envs/tophat.yml), [Cufflinks](envs/cufflinks.yml), [HISAT](envs/hisat.yml), [StringTie](envs/stringtie.yml), and
+The necessary environments for this project are [TopHat](envs/tophat.yml), [Bowtie](envs/bowtie.yml), [Cufflinks](envs/cufflinks.yml), [HISAT](envs/hisat.yml), [StringTie](envs/stringtie.yml), and [Samtools](envs/samtools.yml).
+
+Once the Miniconda3 was [installed](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html), the environments listed above were created following [these instructions](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands).
+
 ### TopHat and Cufflinks Protocol
 **Download Data**
 
