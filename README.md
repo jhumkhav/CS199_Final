@@ -4,14 +4,14 @@
 RNA-seq is used in order to measure and compare gene expression across different situations or conditions. This project aims to compare two different protocols that have been used to study differential gene expression. The first protocol uses TopHat and Cufflinks, while the second uses HISAT, StringTie, and Ballgown.
 
 ## Experimental Design
-**Create the Environments**
+### I. Create the Environments
 
 The necessary environments for this project are [TopHat](envs/tophat.yml), [Bowtie](envs/bowtie.yml), [Cufflinks](envs/cufflinks.yml), [HISAT](envs/hisat.yml), [StringTie](envs/stringtie.yml), and [Samtools](envs/samtools.yml).
 
 Once the Miniconda3 was [installed](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html), the environments listed above were created following [these instructions](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands).
 
-### TopHat and Cufflinks Protocol
-**Download Data**
+### II. TopHat and Cufflinks Protocol
+**A. Download Data**
 
 Download and unpack the Fruit Fly iGenome data.
 ```
@@ -39,7 +39,7 @@ wget ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE32nnn/GSE32038/suppl/GSE32038%5Fsi
 tar -zxvf GSE32038_simulated_fastq_files.tar.gz
 ```
 
-**Analysis**
+**B. Analysis**
 
 Load the TopHat module and map the reads for each of the samples to the reference genome.
 ```
@@ -93,7 +93,7 @@ cuffdiff -o diff_out -b genome.fa -L C1,C2 -u merged_asm/merged.gtf GSM794484_C1
 cuffdiff -o diff_out -b genome.fa -L C1,C2 -u merged_asm/merged.gtf GSM794485_C1_R3_thout/accepted_hits.bam, GSM794488_C2_R3_thout/accepted_hits.bam
 ```
 
-**Data Visualization**
+**C. Data Visualization**
 
 Loading R and the CummerBund package, create a database from the data in the Cuffdiff output.
 ```
@@ -111,7 +111,7 @@ Create a scatter plot that compares the expression of the genes in the different
 > csScatter(genes(cuff_data), 'C1', 'C2')
 ```
 
-**Directory Tree**
+**D. Directory Tree**
 
 Below is a tree of the directory for this protocol that contains all of the downloaded and created files.
 ```
@@ -547,15 +547,15 @@ Below is a tree of the directory for this protocol that contains all of the down
 `-- tophat.sh
 ```
 
-### HISAT, StringTie, and Ballgown
-**Downloading Data**
+### III. HISAT, StringTie, and Ballgown
+**A. Downloading Data**
 
 Unpack the same data that was obtained in the previous protocol.
 ```
 wget ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE32nnn/GSE32038/suppl/GSE32038%5Fsimulated%5Ffastq%5Ffiles%2Etar%2Egz
 tar -zxvf GSE32038_simulated_fastq_files.tar.gz
 ```
-**Analysis**
+**B. Analysis**
 
 Load the HISAT2 module and map the reads for each of the samples to the reference genome.
 ```
@@ -612,7 +612,7 @@ stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C2_R2/C2_R2.gtf C2_R2.b
 stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C2_R3/C2_R3.gtf C2_R3.bam
 ```
 
-**Directory Tree**
+**C. Directory Tree**
 
 Below is a tree of the directory for this protocol that contains all of the downloaded and created files.
 
@@ -709,4 +709,6 @@ Below is a tree of the directory for this protocol that contains all of the down
 |-- stringtie_merged.gtf
 `-- stringtie.sh
 ```
+## IV. Results and Discussion
 
+The results and discussion can be found [here](https://docs.google.com/document/d/1BDGt6vxnI0uYwd2VWN8QQTd4IVIASFijE2-ZktaumLQ/edit?usp=sharing).
