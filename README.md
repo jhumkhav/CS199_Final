@@ -86,7 +86,7 @@ cuffmerge -g genes.gtf -s genome.fa -p 8 assemblies.txt
 
 Use the merged assembly with the BAM files to identify differentially expressed genes and trancripts.
 ```
-module load cufflinks
+conda activate cufflinks
 
 cuffdiff -o diff_out -b genome.fa -L C1,C2 -u merged_asm/merged.gtf GSM794483_C1_R1_thout/accepted_hits.bam, GSM794486_C2_R1_thout/accepted_hits.bam
 cuffdiff -o diff_out -b genome.fa -L C1,C2 -u merged_asm/merged.gtf GSM794484_C1_R2_thout/accepted_hits.bam, GSM794487_C2_R2_thout/accepted_hits.bam
@@ -571,7 +571,7 @@ hisat2 -p 8 --dta -x bdgp6/genome -1 GSM794488_C2_R3_1.fq.gz -2 GSM794488_C2_R3_
 
 Load samtools module and convert SAM files to BAM files
 ```
-module load samtools
+conda activate samtools
 
 samtools sort -@ 8 -o C1_R1.bam C1_R1.sam
 samtools sort -@ 8 -o C1_R2.bam C1_R2.sam
