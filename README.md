@@ -43,7 +43,7 @@ tar -zxvf GSE32038_simulated_fastq_files.tar.gz
 
 Load the TopHat module and map the reads for each of the samples to the reference genome.
 ```
-module load tophat
+conda activate tophat
 
 tophat -p 8 -G genes.gtf -o C1_R1_thout genome GSM794483_C1_R1_1.fq GSM794483_C1_R1_2.fq
 tophat -p 8 -G genes.gtf -o C1_R2_thout genome GSM794484_C1_R2_1.fq GSM794484_C1_R2_2.fq
@@ -55,7 +55,7 @@ tophat -p 8 -G genes.gtf -o C2_R3_thout genome GSM794488_C2_R3_1.fq GSM794488_C2
 
 Load the Cufflinks module and assemble the transcripts for each sample.
 ```
-module load cufflinks
+conda activate cufflinks
 
 cufflinks -p 8 -o C1_R1_clout C1_R1_thout/accepted_hits.bam
 cufflinks -p 8 -o C1_R2_clout C1_R2_thout/accepted_hits.bam
@@ -79,7 +79,7 @@ vim assemblies
 
 Load Cufflinks and create a single annotation that merges all of the assemblies.
 ```
-module load cufflinks
+conda activate cufflinks
 
 cuffmerge -g genes.gtf -s genome.fa -p 8 assemblies.txt
 ```
@@ -559,7 +559,7 @@ tar -zxvf GSE32038_simulated_fastq_files.tar.gz
 
 Load the HISAT2 module and map the reads for each of the samples to the reference genome.
 ```
-module load hisat2
+conda activate hisat2
 
 hisat2 -p 8 --dta -x bdgp6/genome -1 GSM794483_C1_R1_1.fq.gz -2 GSM794483_C1_R1_2.fq.gz -S C1_R1.sam
 hisat2 -p 8 --dta -x bdgp6/genome -1 GSM794484_C1_R2_1.fq.gz -2 GSM794484_C1_R2_2.fq.gz -S C1_R2.sam
@@ -583,7 +583,7 @@ samtools sort -@ 8 -o C2_R3.bam C2_R3.sam
 
 Load StringTie and assemble the transcripts for each file.
 ```
-module load stringtie
+conda activate stringtie
 
 stringtie -p 8 -G genes.gtf -o C1_R1.gtf -l C1_R1 C1_R1.bam
 stringtie -p 8 -G genes.gtf -o C1_R2.gtf -l C1_R2 C1_R2.bam
@@ -595,14 +595,14 @@ stringtie -p 8 -G genes.gtf -o C2_R3.gtf -l C2_R3 C2_R3.bam
 
 Merge all of the trancripts using StringTie module.
 ```
-module load stringtie
+conda activate stringtie
 
 stringtie --merge -p 8 -G genes.gtf -o stringtie_merged.gtf mergelist.txt
 ```
 
 Load StringeTie module and determine abundances of transcripts and prepare data for Ballgown.
 ```
-module load stringtie
+conda activate stringtie
 
 stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C1_R1/C1_R1.gtf C1_R1.bam
 stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/C1_R2/C1_R2.gtf C1_R2.bam
